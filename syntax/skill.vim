@@ -18,14 +18,13 @@ syn keyword skillConstants t nil unbound
 
 " enumerate all the SKILL reserved words/functions
 
-syntax keyword skillConditional caseq cond if then else when unless 
+syntax keyword skillConditional caseq cond if then else when unless
 
-syntax keyword skillKeywords begin declare declareN declareSQN declareLambda defmacro 
-            \ defprop defstruct defun define defUserInitProc 
-            \ defvar lambda last let letseq letrec 
-            \ list procedure prog return
+syntax keyword skillKeywords begin declare declareN declareSQN declareLambda
+            \ defmacro defprop defstruct defun define defUserInitProc defvar
+            \ lambda last let letseq letrec list procedure prog return
 
-syntax keyword skillRepeat go for forall foreach while 
+syntax keyword skillRepeat go for forall foreach while
 
 syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ alphalessp alphaNumCmp append1 apply arrayp arrayref asin sin
