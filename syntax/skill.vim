@@ -29,12 +29,8 @@ syntax keyword skillRepeat go for forall foreach while
 syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ alphalessp alphaNumCmp append1 apply arrayp arrayref asin sin
             \ assoc assq assv atan tan atom bcdp booleanp boundp buildString
-            \ ceiling changeWorkingDir caaaar caaadr caadar caaddr caar cddaar
-            \ cddadr cdddar cddddr caddar cadddr cadr cdaaar cdaadr cdaar 
-            \ cdadar cdaddr cdadr cdar cddaar cddadr cddar cdddar cddddr cdddr 
-            \ cddr caaar caadr cadar caddr cdadr cadaar cadadr caddar cadddr 
-            \ cdaaar cdaadr cdadar cdaddr charToInt clearExitProcs close 
-            \ compareTime compress concat cons copy copyDefstructDeep createDir 
+            \ ceiling changeWorkingDir charToInt clearExitProcs close
+            \ compareTime compress concat cons copy copyDefstructDeep createDir
             \ csh defstructp delete deleteDir deleteFile display drain dtpr
             \ edit envobj equal eqv err error errset errsetstring eval
             \ evalstring evenp exists exit exp expandMacro file fileLength
@@ -96,6 +92,7 @@ syn match skillpcFunctions   "\cpc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*
 " tech file functions
 syn match skilltechFunctions "\ctech\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 syn match skilltechFunctions "\ctc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
 " strings
 syn region skillString				start=+"+ skip=+\\"+ end=+"+
