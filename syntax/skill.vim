@@ -14,6 +14,7 @@ endif
 
 let b:current_syntax = "skill"
 
+
 syn keyword skillConstants t nil unbound
 
 " enumerate all the SKILL reserved words/functions
@@ -42,7 +43,7 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ getVarWriteProtect getVersion getWarn getWorkingDir index infile
             \ inportp inScheme inSkill instring integerp intToChar isCallable
             \ isDir isExecutable isFile isFileEncrypted isFileName isLink
-            \ isMacro isWritable lconc length lineread readstring listp
+            \ isMacro isWritable lconc length lindex lineread readstring listp
             \ listToVector loadi load loadstring log lowerCase makeTable
             \ makeTempFileName makeVector map mapcar mapcan maplist plus
             \ difference quotient times max measureTime member memq memv min
@@ -57,12 +58,13 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ rexSubstitute rindex round rplacad schemeTopLevelEnv set setq
             \ setSGq setSG setarray setcdr setcadr setFnWriteProtect setof
             \ setplist setShellEnvVar setSkillPath setVarWriteProtect sh shell
-            \ simplifyFilename sort sortcar sqrt srandom sstatus strn strncat
-            \ strncmp stringp stringToFunction stringToSymbol stringToTime
-            \ strlen sub1 subst substring sxtd symbolp symbolToString symeval
-            \ symstrp system tablep tableToList tailp tconc timeToString
-            \ timeToTm tmToTime truncate typep unalias upperCase vector
-            \ vectorToList warn write writeTable xcons zerop zxtd 
+            \ simplifyFilename sort sortcar sqrt srandom sstatus strcat strn
+            \ strncat strncmp stringp stringToFunction stringToSymbol
+            \ stringToTime strlen sub1 subst substring sxtd symbolp
+            \ symbolToString symeval symstrp system tablep tableToList tailp
+            \ tconc timeToString timeToTm tmToTime truncate typep unalias
+            \ upperCase vector vectorToList warn write writeTable xcons zerop
+            \ zxtd
 
 " DFII procedural interface routines
 
@@ -107,6 +109,7 @@ syn match   skillSymbol             "\c['`]\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0
 syntax match skillArrow    "->\(\w\+\)\@="
 syntax match skillSquiggle "\~>\(\w\+\)\@="
 syntax match skillProperty "\(->\|\~>\)\@<=\(\w\+\)"
+
 syn sync ccomment skillComment minlines=10
 
 " Define the default highlighting.
@@ -117,9 +120,11 @@ hi def link skillDFIIFunction   Function
 hi def link skillQuote          Constant
 hi def link skillVarArg         Operator
 hi def link skillSymbol         Special
+
 hi def link skillArrow          Delimiter
 hi def link skillSquiggle       Delimiter
 hi def link skillProperty       Identifier
+
 hi def link skillFunction		Function
 hi def link skillCustomFunction	String
 hi def link skillKeywords		Define
