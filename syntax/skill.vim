@@ -66,32 +66,24 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
 
 " DFII procedural interface routines
 
-" CDF functions
-syn match skillcdfFunctions  "\ccdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+" \<   beginning of word
+" (\@= followed by '\' but '\' is not included in the match
+syntax match skillCustomFunction "\<\%(\w\+\)(\@="
 
-" graphic editor functions
-syn match skillgeFunctions   "\cge\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syntax match skillDFIIFunction "\<cdf\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<ccp\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<db\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<dd\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<de\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<df\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<gdm\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<ge\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<hi\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<le\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<pc\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<tc\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<tech\%(\w\+\)(\@="
 
-" human interface functions
-syn match skillhiFunctions   "\chi\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-
-" layout editor functions
-syn match skillleFunctions   "\cle\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-
-" database|design editor|design flow functions
-syn match skilldbefFunctions "\cdb\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match skilldbefFunctions "\cde\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match skilldbefFunctions "\cdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-
-" design management & design data services functions
-syn match skillddFunctions   "\cdd\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-
-" parameterized cell functions
-syn match skillpcFunctions   "\cpc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-
-" tech file functions
-syn match skilltechFunctions "\ctech\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match skilltechFunctions "\ctc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
 " strings
@@ -119,21 +111,15 @@ syn sync ccomment skillComment minlines=10
 " Define the default highlighting.
 " Only when an item doesn't have highlighting yet
 
-hi def link skillcdfFunctions	Function
-hi def link skillgeFunctions    Function
-hi def link skillhiFunctions    Function
-hi def link skillleFunctions    Function
-hi def link skilldbefFunctions	Function
-hi def link skillddFunctions	Function
-hi def link skillpcFunctions    Function
-hi def link skilltechFunctions	Function
 hi def link skillConstants		Constant
+hi def link skillDFIIFunction   Function
 hi def link skillQuote          Constant
 hi def link skillVarArg         Operator
 hi def link skillSymbol         Special
 hi def link skillArrow          Operator
 hi def link skillSquiggle       Operator
 hi def link skillFunction		Function
+hi def link skillCustomFunction	String
 hi def link skillKeywords		Define
 hi def link skillConditional	Conditional
 hi def link skillRepeat			Repeat
