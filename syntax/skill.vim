@@ -30,10 +30,10 @@ syntax keyword skillRepeat go for forall foreach while
 syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ alphalessp alphaNumCmp append1 apply arrayp arrayref asin sin
             \ assoc assq assv atan tan atom bcdp booleanp boundp buildString
-            \ ceiling changeWorkingDir charToInt clearExitProcs close
-            \ compareTime compress concat cons copy copyDefstructDeep createDir
-            \ csh defstructp delete deleteDir deleteFile display drain dtpr
-            \ edit envobj equal eqv err error errset errsetstring eval
+            \ callInitProc ceiling changeWorkingDir charToInt clearExitProcs
+            \ close compareTime compress concat cons copy copyDefstructDeep
+            \ createDir csh defstructp delete deleteDir deleteFile display drain
+            \ dtpr edit envobj equal eqv err error errset errsetstring eval
             \ evalstring evenp exists exit exp expandMacro file fileLength
             \ fileSeek fileTell fileTimeModified fixp floatp floor printf
             \ fprintf sprintf scanf fscanf funobj gc gensym get get_pname
@@ -44,27 +44,26 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ inportp inScheme inSkill instring integerp intToChar isCallable
             \ isDir isExecutable isFile isFileEncrypted isFileName isLink
             \ isMacro isWritable lconc length lindex lineread readstring listp
-            \ listToVector loadi load loadstring log lowerCase makeTable
-            \ makeTempFileName makeVector map mapcar mapcan maplist plus
-            \ difference quotient times max measureTime member memq memv min
-            \ minusp mod nconc ncons needNCells negativep neq nequal newline
-            \ nindex not nth nthcdr nthelem null numberp numOpenFiles oddp
-            \ onep otherp outfile outportp pairp parseString plist plusp portp
-            \ p\=print prependInstallPath print println procedurep putd
-            \ putpropq putpropqq random read readString readTable realp
-            \ regExitAfter regExitBefore remainder remdq remd remExitProc
-            \ remove remprop remq reverse rexCompile rexExecute rexMagic
-            \ rexMatchAssocList rexMatchList rexMatchp rexReplace
-            \ rexSubstitute rindex round rplacad schemeTopLevelEnv set setq
-            \ setSGq setSG setarray setcdr setcadr setFnWriteProtect setof
-            \ setplist setShellEnvVar setSkillPath setVarWriteProtect sh shell
-            \ simplifyFilename sort sortcar sqrt srandom sstatus strcat strn
-            \ strncat strncmp stringp stringToFunction stringToSymbol
-            \ stringToTime strlen sub1 subst substring sxtd symbolp
-            \ symbolToString symeval symstrp system tablep tableToList tailp
-            \ tconc timeToString timeToTm tmToTime truncate typep unalias
-            \ upperCase vector vectorToList warn write writeTable xcons zerop
-            \ zxtd
+            \ listToVector load loadContext loadi loadstring log lowerCase
+            \ makeTable makeTempFileName makeVector map mapcar mapcan maplist
+            \ plus difference quotient times max measureTime member memq memv
+            \ min minusp mod nconc ncons needNCells negativep neq nequal newline
+            \ nindex not nth nthcdr nthelem null numberp numOpenFiles oddp onep
+            \ otherp outfile outportp pairp parseString plist plusp portp
+            \ p\=print prependInstallPath print println procedurep putd putpropq
+            \ putpropqq random read readString readTable realp regExitAfter
+            \ regExitBefore remainder remdq remd remExitProc remove remprop remq
+            \ reverse rexCompile rexExecute rexMagic rexMatchAssocList
+            \ rexMatchList rexMatchp rexReplace rexSubstitute rindex round
+            \ rplacad schemeTopLevelEnv set setq setSGq setSG setarray setcdr
+            \ setcadr setFnWriteProtect setof setplist setShellEnvVar
+            \ setSkillPath setVarWriteProtect sh shell simplifyFilename sort
+            \ sortcar sqrt srandom sstatus strcat strn strncat strncmp stringp
+            \ stringToFunction stringToSymbol stringToTime strlen sub1 subst
+            \ substring sxtd symbolp symbolToString symeval symstrp system
+            \ tablep tableToList tailp tconc timeToString timeToTm tmToTime
+            \ truncate typep unalias upperCase vector vectorToList warn write
+            \ writeTable xcons zerop zxtd
 
 " DFII procedural interface routines
 
