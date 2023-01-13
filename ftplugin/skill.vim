@@ -1,5 +1,10 @@
 " Skill Commands
 
+" REPL integration is compatible only with neovim
+if !has('nvim')
+    finish
+endif
+
 "let g:skill_repl = 'rlwrap skill'
 "let g:skill_repl = 'rlwrap dbAccess'
 let g:skill_repl = get(g:, 'skill_repl', "rlwrap virtuoso -nographE")
