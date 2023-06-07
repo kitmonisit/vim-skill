@@ -36,35 +36,35 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ dtpr edit envobj equal eqv err error errset errsetstring eval
             \ evalstring evenp exists exit exp expandMacro file fileLength
             \ fileSeek fileTell fileTimeModified fixp floatp floor printf
-            \ fprintf sprintf scanf fscanf funobj gc gensym get get_pname
-            \ get_string getc getchar getCurrentTime getd getDirFiles
-            \ getFnWriteProtect getRunType getInstallPath getqq getq gets
-            \ getShellEnvVar getSkill getSkillPath getSkillVersion
+            \ fprintf sprintf scanf fscanf funobj funcall gc gensym get
+            \ get_pname get_string getc getchar getCurrentTime getd
+            \ getDirFiles getFnWriteProtect getRunType getInstallPath getqq getq
+            \ gets getShellEnvVar getSkill getSkillPath getSkillVersion
             \ getVarWriteProtect getVersion getWarn getWorkingDir index infile
             \ inportp inScheme inSkill instring integerp intToChar isCallable
             \ isDir isExecutable isFile isFileEncrypted isFileName isLink
             \ isMacro isWritable lconc length lindex lineread readstring listp
             \ listToVector load loadContext loadi loadstring log lowerCase
             \ lowerLeft makeTable makeTempFileName makeVector map mapc mapcar
-            \ mapcan mapcon maplist plus difference quotient times max measureTime
-            \ member memq memv min minusp mod modf nconc ncons needNCells negativep
-            \ neq nequal newline nindex not nth nthcdr nthelem null numberp
-            \ numOpenFiles oddp onep otherp outfile outportp pairp parseString
-            \ plist plusp portp pprint prependInstallPath print println
-            \ procedurep putd putpropq putpropqq random read readString
-            \ readTable realp regExitAfter regExitBefore remainder remdq remd
-            \ remExitProc remove remprop remq reverse rexCompile rexExecute
-            \ rexMagic rexMatchAssocList rexMatchList rexMatchp rexReplace
-            \ rexSubstitute rindex round rplacad schemeTopLevelEnv set setq
-            \ setSGq setSG setarray setcdr setcadr setFnWriteProtect setof
-            \ setplist setShellEnvVar setSkillPath setVarWriteProtect sh shell
-            \ simplifyFilename sort sortcar sqrt srandom sstatus strcat strn
-            \ strncat strncmp stringp stringToFunction stringToSymbol
-            \ stringToTime strlen sub1 subst substring sxtd symbolp
-            \ symbolToString symeval symstrp system tablep tableToList tailp
-            \ tconc timeToString timeToTm tmToTime truncate typep unalias
-            \ upperCase upperRight vector vectorToList warn write writeTable
-            \ xCoord xcons yCoord zerop zxtd
+            \ mapcan mapcon maplist plus difference quotient times max
+            \ measureTime member memq memv min minusp mod modf nconc ncons
+            \ needNCells negativep neq nequal newline nindex not nth nthcdr
+            \ nthelem null numberp numOpenFiles oddp onep otherp outfile
+            \ outportp pairp parseString plist plusp portp pprint
+            \ prependInstallPath print println procedurep putd putpropq
+            \ putpropqq random read readString readTable realp regExitAfter
+            \ regExitBefore remainder remdq remd remExitProc remove remprop remq
+            \ reverse rexCompile rexExecute rexMagic rexMatchAssocList
+            \ rexMatchList rexMatchp rexReplace rexSubstitute rindex round
+            \ rplacad schemeTopLevelEnv set setq setSGq setSG setarray setcdr
+            \ setcadr setFnWriteProtect setof setplist setShellEnvVar
+            \ setSkillPath setVarWriteProtect sh shell simplifyFilename sort
+            \ sortcar sqrt srandom sstatus strcat strn strncat strncmp stringp
+            \ stringToFunction stringToSymbol stringToTime strlen sub1 subst
+            \ substring sxtd symbolp symbolToString symeval symstrp system
+            \ tablep tableToList tailp tconc timeToString timeToTm tmToTime
+            \ truncate typep unalias upperCase upperRight vector vectorToList
+            \ warn write writeTable xCoord xcons yCoord zerop zxtd
 
 syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
