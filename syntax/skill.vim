@@ -45,25 +45,28 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ isDir isExecutable isFile isFileEncrypted isFileName isLink
             \ isMacro isWritable lconc length lindex lineread readstring listp
             \ listToVector load loadContext loadi loadstring log lowerCase
-            \ makeTable makeTempFileName makeVector map mapcar mapcan maplist
-            \ plus difference quotient times max measureTime member memq memv
-            \ min minusp mod nconc ncons needNCells negativep neq nequal newline
-            \ nindex not nth nthcdr nthelem null numberp numOpenFiles oddp onep
-            \ otherp outfile outportp pairp parseString plist plusp portp
-            \ p\=print prependInstallPath print println procedurep putd putpropq
-            \ putpropqq random read readString readTable realp regExitAfter
-            \ regExitBefore remainder remdq remd remExitProc remove remprop remq
-            \ reverse rexCompile rexExecute rexMagic rexMatchAssocList
-            \ rexMatchList rexMatchp rexReplace rexSubstitute rindex round
-            \ rplacad schemeTopLevelEnv set setq setSGq setSG setarray setcdr
-            \ setcadr setFnWriteProtect setof setplist setShellEnvVar
-            \ setSkillPath setVarWriteProtect sh shell simplifyFilename sort
-            \ sortcar sqrt srandom sstatus strcat strn strncat strncmp stringp
-            \ stringToFunction stringToSymbol stringToTime strlen sub1 subst
-            \ substring sxtd symbolp symbolToString symeval symstrp system
-            \ tablep tableToList tailp tconc timeToString timeToTm tmToTime
-            \ truncate typep unalias upperCase vector vectorToList warn write
-            \ writeTable xcons zerop zxtd
+            \ lowerLeft makeTable makeTempFileName makeVector map mapc mapcar
+            \ mapcan mapcon maplist plus difference quotient times max measureTime
+            \ member memq memv min minusp mod modf nconc ncons needNCells negativep
+            \ neq nequal newline nindex not nth nthcdr nthelem null numberp
+            \ numOpenFiles oddp onep otherp outfile outportp pairp parseString
+            \ plist plusp portp pprint prependInstallPath print println
+            \ procedurep putd putpropq putpropqq random read readString
+            \ readTable realp regExitAfter regExitBefore remainder remdq remd
+            \ remExitProc remove remprop remq reverse rexCompile rexExecute
+            \ rexMagic rexMatchAssocList rexMatchList rexMatchp rexReplace
+            \ rexSubstitute rindex round rplacad schemeTopLevelEnv set setq
+            \ setSGq setSG setarray setcdr setcadr setFnWriteProtect setof
+            \ setplist setShellEnvVar setSkillPath setVarWriteProtect sh shell
+            \ simplifyFilename sort sortcar sqrt srandom sstatus strcat strn
+            \ strncat strncmp stringp stringToFunction stringToSymbol
+            \ stringToTime strlen sub1 subst substring sxtd symbolp
+            \ symbolToString symeval symstrp system tablep tableToList tailp
+            \ tconc timeToString timeToTm tmToTime truncate typep unalias
+            \ upperCase upperRight vector vectorToList warn write writeTable
+            \ xCoord xcons yCoord zerop zxtd
+
+syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
 " DFII procedural interface routines
 
@@ -71,12 +74,15 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
 " (\@= followed by '\' but '\' is not included in the match
 syntax match skillCustomFunction "\<\%(\w\+\)(\@="
 
+syntax match skillDFIIFunction "\<awv\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<cdf\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<ccp\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<db\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<dd\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<de\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<df\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<dr\%(\w\+\)(\@="
+syntax match skillDFIIFunction "\<fam\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<gdm\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<ge\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<hi\%(\w\+\)(\@="
@@ -84,8 +90,6 @@ syntax match skillDFIIFunction "\<le\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<pc\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<tc\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<tech\%(\w\+\)(\@="
-
-syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
 " strings
 syn region skillString				start=+"+ skip=+\\"+ end=+"+
@@ -117,7 +121,7 @@ syn sync ccomment skillComment minlines=10
 hi def link skillConstants		Constant
 hi def link skillDFIIFunction   Function
 hi def link skillQuote          Constant
-hi def link skillVarArg         Operator
+hi def link skillVarArg         Special
 hi def link skillSymbol         Special
 
 hi def link skillArrow          Delimiter
