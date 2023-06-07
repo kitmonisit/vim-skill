@@ -66,7 +66,6 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ truncate typep unalias upperCase upperRight vector vectorToList
             \ warn write writeTable xCoord xcons yCoord zerop zxtd
 
-syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
 " DFII procedural interface routines
 
@@ -90,6 +89,8 @@ syntax match skillDFIIFunction "\<le\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<pc\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<tc\%(\w\+\)(\@="
 syntax match skillDFIIFunction "\<tech\%(\w\+\)(\@="
+
+syntax match skillFunction "\<c\(a\|d\)\{1,4}r(\@="
 
 " strings
 syn region skillString				start=+"+ skip=+\\"+ end=+"+
