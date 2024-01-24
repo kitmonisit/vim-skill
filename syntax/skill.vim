@@ -36,7 +36,7 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
             \ dtpr edit envobj equal eqv err error errset errsetstring eval
             \ evalstring evenp exists exit exp expandMacro file fileLength
             \ fileSeek fileTell fileTimeModified fixp floatp floor printf
-            \ fprintf sprintf scanf fscanf funobj funcall gc gensym get
+            \ fprintf sprintf lsprintf scanf fscanf funobj funcall gc gensym get
             \ get_pname get_string getc getchar getCurrentTime getd
             \ getDirFiles getFnWriteProtect getRunType getInstallPath getqq getq
             \ gets getShellEnvVar getSkill getSkillPath getSkillVersion
